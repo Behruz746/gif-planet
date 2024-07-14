@@ -1,8 +1,8 @@
-# React + Vite
+If you want to use this project, follow these steps:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ensure you have Git Bash installed. If not, click the download button.
 
-Currently, two official plugins are available:
+If you have Git Bash, open it and type the following command: git clone https://github.com/Behruz746/gif-planet.git
+Open the project in your code editor and type npm install to install the project's packages listed in the package.json file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Finally, type npm run dev to run the project in your browser.
