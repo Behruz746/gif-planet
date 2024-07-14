@@ -1,3 +1,14 @@
+@import "./font";
+@import "./reset";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./styles";
+
+body {
+  font-family: "Inter";
+  background-color: #121212;
+  color: #fff;
+  width: 100%;
+  height: auto;
+}
