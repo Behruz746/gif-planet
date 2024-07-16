@@ -1,5 +1,5 @@
 const styles = {
-  container: "max-w-[1070px] w-full m-auto px-[15px]",
+  container: "max-w-[1200px] w-full m-auto px-[15px]",
   flexCenter: "flex justify-center items-center",
   flexBetween: "flex justify-between items-center",
   border: "border-[1px] border-white border-solid",
@@ -12,9 +12,9 @@ const textStyles = {
   text: "font-Inter text-[16px] font-semibold leading-normal sm:text-[18px]",
   text2: "font-Inter text-[14px] font-medium leading-normal sm:text-[16px]",
   // small text
-  text3: "font-Inter text-[12px] font-semibold leading-normal",
-  text3_medium: "font-Inter text-[12px] font-medium leading-normal",
-  text3_normal: "font-Inter text-[12px] font-normal leading-normal",
+  text3: "font-Inter text-[15px] font-semibold leading-normal",
+  text3_medium: "font-Inter text-[15px] font-medium leading-normal",
+  text3_normal: "font-Inter text-[15px] font-normal leading-normal",
   text4: "font-Inter text-[10px] font-medium leading-normal",
 };
 

@@ -1,12 +1,24 @@
 import React from "react";
-import { styles, textStyles } from "./util/styles";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MainRoot } from "./layout";
+import { Home, Error } from "./pages";
 
 function App() {
-  return (
-    <div className={`${styles.container}`}>
-      <h1 className={`${textStyles.title}`}>Hello World</h1>
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainRoot />,
+      errorElement: <Error />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
