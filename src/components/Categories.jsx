@@ -3,10 +3,24 @@ import { v4 as uuidv4 } from "uuid";
 import { NavLink } from "react-router-dom";
 import { categories } from "../constans/index";
 import { textStyles } from "../util/styles";
+import { catalogActive } from "../slice/catalog";
+import { useDispatch, useSelector } from "react-redux";
 
 function Categories() {
+  const { catalogToggle } = useSelector((state) => state.catalog);
+  const dispatch = useDispatch();
+
   return (
-    <div className="absolute top-[54px] left-[0] w-full flex flex-col gap-[8px] items-start py-[8px] px-[16px] bg-[#282626]">
+    <div
+      className={`absolute left-[0] w-full flex flex-col gap-[8px] items-start py-[8px] px-[16px] bg-[#282626] ease-in duration-100 ${
+        catalogToggle
+          ? "top-[50px] opacity-[1] z-[1] pointer-events-auto select-auto"
+          : "-top-[0px] pointer-events-none opacity-[0] -z-[100] select-none"
+      }`}
+      onMouseEnter={() => dispatch(catalogActive(true))}
+      onMouseLeave={() => dispatch(catalogActive(false))}
+    >
+      <div className="w-full h-[20px] absolute -top-[20px] left-0"></div>
       <NavLink
         to="/categories"
         className={`${textStyles.title2} cursor-pointer`}
