@@ -1,3 +1,10 @@
 .transition-liner {
   transition: 0.2s linear;
 }
+
+.svg-blue {
+  path {
+    transition: 0.2s linear !important;
+    fill: #00acef;
+  }
+}

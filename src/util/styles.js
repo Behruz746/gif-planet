@@ -9,6 +9,7 @@ const styles = {
 
 const textStyles = {
   title: "font-Inter text-[24px] font-semibold leading-normal sm:text-[32px]",
+  title2: "font-Inter text-[18px] font-semibold leading-normal sm:text-[24px]",
   text: "font-Inter text-[16px] font-semibold leading-normal sm:text-[18px]",
   text2: "font-Inter text-[14px] font-medium leading-normal sm:text-[16px]",
   // small text
