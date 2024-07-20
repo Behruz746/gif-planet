@@ -1,5 +1,6 @@
 const styles = {
-  container: "max-w-[1200px] w-full m-auto px-[15px]",
+  container: "max-w-[1200px] w-full m-auto",
+  padding: "px-[10px] sm:px-[15px]",
   flexCenter: "flex justify-center items-center",
   flexBetween: "flex justify-between items-center",
   border: "border-[1px] border-white border-solid",

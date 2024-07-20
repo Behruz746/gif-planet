@@ -23,7 +23,7 @@ function Categories() {
       <div className="w-full h-[20px] absolute -top-[20px] left-0"></div>
       <NavLink
         to="/categories"
-        className={`${textStyles.title2} cursor-pointer`}
+        className={`${textStyles.title2} text-white cursor-pointer`}
       >
         Categories
       </NavLink>

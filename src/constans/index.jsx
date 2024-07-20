@@ -1,5 +1,6 @@
 const logo = "/img/svg/logo.svg";
 const searchIcon = "/img/svg/search-icon.svg";
+const chart = "/img/svg/chart-icon.svg";
 
 const CatalogIcon = ({ color }) => (
   <svg
@@ -65,4 +66,27 @@ const categories = [
   ],
 ];
 
-export { logo, searchIcon, CatalogIcon, navigationLinks, categories };
+const titleNav = [
+  {
+    title: "Gifs",
+    dataName: "gif",
+  },
+  {
+    title: "Stickers",
+    dataName: "sticker",
+  },
+  {
+    title: "Clips",
+    dataName: "clips",
+  },
+];
+
+export {
+  logo,
+  chart,
+  searchIcon,
+  CatalogIcon,
+  navigationLinks,
+  categories,
+  titleNav,
+};

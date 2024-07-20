@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -39,7 +39,6 @@ function Header() {
                 {link.icon ? <CatalogIcon color={catalogToggle} /> : link.name}
               </NavLink>
             ))}
-
             <Categories />
           </nav>
         </div>

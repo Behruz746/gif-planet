@@ -2,6 +2,18 @@
   transition: 0.2s linear;
 }
 
+.auther-hover {
+  .auther {
+    transition: 0.1s ease-out;
+  }
+
+  &:hover {
+    .auther {
+      bottom: 0;
+    }
+  }
+}
+
 .svg-blue {
   path {
     transition: 0.2s linear !important;

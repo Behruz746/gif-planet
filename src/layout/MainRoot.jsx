@@ -6,8 +6,8 @@ function MainRoot() {
   return (
     <>
       <Header />
-      <main>
-        {/* <Outlet /> */}
+      <main className="mt-[10px] sm:mt-[30px]">
+        <Outlet />
       </main>
     </>
   );
