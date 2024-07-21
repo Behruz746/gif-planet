@@ -1,12 +1,13 @@
 import React from "react";
 import { textStyles } from "../../util/styles";
 
-function GifCard() {
+function GifCard({ autherName, gif }) {
   return (
     <div
-      className={`w-full sm:w-[308px] h-[230px] bg-[#FFB42B]  bg-[url('/img/webp/card.png')] bg-cover bg-no-repeat relative overflow-hidden auther-hover cursor-pointer`}
+      className={`bg-[#FFB42B] relative overflow-hidden auther-hover cursor-pointer`}
     >
-      <div className="auther w-full flex items-center justify-start gap-[24px] py-[5px] px-[10px]  bg-gradient-to-t from-[#80808050] to-[#39383834] absolute bottom-0 sm:-bottom-[50px] left-0 sm:backdrop-blur-[5px]">
+      <img src={gif} className="w-full h-auto" alt="gif" />
+      <div className="auther w-full flex items-center justify-start gap-[24px] py-[5px] px-[10px]  bg-gradient-to-t from-[#80808050] to-[#39383834] absolute bottom-0 sm:-bottom-[50px] left-0 backdrop-blur-[3px] sm:backdrop-blur-[5px]">
         <div className="w-[40px] h-[40px] rounded-full bg-lightBlue overflow-hidden">
           <img
             width={40}
@@ -16,7 +17,7 @@ function GifCard() {
             alt="auther avatar"
           />
         </div>
-        <h1 className={`${textStyles.text2} text-white`}>Behruz Madaminov</h1>
+        <h1 className={`${textStyles.text2} text-white`}>{autherName}</h1>
       </div>
     </div>
   );

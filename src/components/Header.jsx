@@ -17,7 +17,7 @@ function Header() {
   };
 
   return (
-    <header className="w-full py-[20px] sticky top-0 left-0">
+    <header className="w-full py-[20px] sticky top-0 left-0 z-[100]">
       <div
         className={`${styles.container} ${styles.border} flex items-center justify-between py-[9px] px-[0] bg-dark`}
       >
