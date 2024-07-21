@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { catalogToggleHandler } from "../slice/catalog";
 import { Search } from "./";
@@ -11,6 +11,7 @@ import { styles, textStyles } from "../util/styles";
 function Header() {
   const { catalogToggle } = useSelector((state) => state.catalog);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleMouseToggle = (link, toggle) => {
     dispatch(catalogToggleHandler({ icon: link, toggle }));
@@ -21,7 +22,10 @@ function Header() {
       <div
         className={`${styles.container} ${styles.border} flex items-center justify-between py-[9px] px-[0] bg-dark`}
       >
-        <div className="w-[108px] h-[48] flex items-center justify-center cursor-pointer pl-[10px] sm:pl-[15px]">
+        <div
+          className="w-[108px] h-[48] flex items-center justify-center cursor-pointer pl-[10px] sm:pl-[15px]"
+          onClick={() => navigate("/")}
+        >
           <img width={108} height={48} src={logo} alt="gif planet logo" />
         </div>
 
@@ -30,7 +34,9 @@ function Header() {
           <nav className="w-full flex items-center justify-between gap-[16px] relative pr-[10px] sm:pr-[15px]">
             {navigationLinks.map((link) => (
               <NavLink
-                to={`/`}
+                to={`/${
+                  !link.icon ? link.name.toLocaleLowerCase() : "categories/"
+                }`}
                 className={`${textStyles.text2} text-white cursor-pointer transition ease-in-out hover:text-lightBlue py-[8px]`}
                 key={uuidv4()}
                 onMouseEnter={() => handleMouseToggle(link.icon, true)}

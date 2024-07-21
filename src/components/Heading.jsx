@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { titleNav } from "../constans";
 import { styles, textStyles } from "../util/styles";
 
-function Title({ icon, title, nav }) {
+function Heading({ icon, title, nav }) {
   return (
     <section
       className={`${styles.container} ${styles.padding} ${styles.flexBetween} w-full`}
@@ -36,4 +36,4 @@ function Title({ icon, title, nav }) {
   );
 }
 
-export default Title;
+export default Heading;

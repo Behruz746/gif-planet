@@ -34,7 +34,7 @@ function Categories() {
               {categories[idx]?.map((item) => (
                 <NavLink
                   key={uuidv4()}
-                  to={item.path}
+                  to={`/categories/${item.path}`}
                   className={`${textStyles.text2} transition ease-in-out text-white cursor-pointer hover:text-lightBlue`}
                 >
                   {item.name}

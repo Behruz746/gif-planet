@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { MainRoot } from "./layout";
-import { Home, Error } from "./pages";
+import { MainRoot, CategorieRoot } from "./layout";
+import { Home, Categories, Error } from "./pages";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,9 +10,11 @@ function App() {
       element: <MainRoot />,
       errorElement: <Error />,
       children: [
+        { index: true, element: <Home /> },
         {
-          index: true,
-          element: <Home />,
+          path: "categories",
+          element: <CategorieRoot />,
+          children: [{ path: ":name", element: <Categories /> }],
         },
       ],
     },

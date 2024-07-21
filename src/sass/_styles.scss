@@ -14,6 +14,16 @@
   }
 }
 
+.categories-nav {
+  &.active {
+    color: #00acef;
+  }
+}
+
+.user-background {
+  background: linear-gradient(187deg, #282626 5.81%, #161515 94.51%);
+}
+
 .svg-blue {
   path {
     transition: 0.2s linear !important;

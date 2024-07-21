@@ -1,6 +1,7 @@
 const logo = "/img/svg/logo.svg";
 const searchIcon = "/img/svg/search-icon.svg";
 const chart = "/img/svg/chart-icon.svg";
+const anime = "/img/svg/anime-icon.svg";
 
 const CatalogIcon = ({ color }) => (
   <svg
@@ -64,6 +65,27 @@ const categories = [
     { name: "Weird", path: "weird" },
     { name: "TV", path: "tv" },
   ],
+];
+
+const navCategories = [
+  { name: "GIPHY Studios", path: "giphy-studios" },
+  { name: "Animals", path: "animals" },
+  { name: "Actions", path: "actions" },
+  { name: "Anime", path: "anime" },
+  { name: "Cartoons", path: "cartoons" },
+  { name: "Emotions", path: "emotions" },
+  { name: "Food/Drink", path: "food-drink" },
+  { name: "Gaming", path: "gaming" },
+  { name: "Holidays/Greetings", path: "holidays-greetings" },
+  { name: "Memes", path: "memes" },
+  { name: "Clips", path: "clips" },
+  { name: "Music", path: "music" },
+  { name: "Movies", path: "movies" },
+  { name: "News/Politics", path: "news-politics" },
+  { name: "Science", path: "science" },
+  { name: "Transportation", path: "transportation" },
+  { name: "Weird", path: "weird" },
+  { name: "TV", path: "tv" },
 ];
 
 const titleNav = [
@@ -153,9 +175,11 @@ const gifData = [
 export {
   logo,
   chart,
+  anime,
   searchIcon,
   CatalogIcon,
   navigationLinks,
+  navCategories,
   categories,
   titleNav,
   gifData,
