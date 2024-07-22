@@ -18,7 +18,7 @@ function Header() {
   };
 
   return (
-    <header className="w-full py-[20px] sticky top-0 left-0 z-[100]">
+    <header className="w-full pt-[0] pb-[10px] sm:py-[20px] sticky top-0 left-0 z-[100]">
       <div
         className={`${styles.container} ${styles.border} flex items-center justify-between py-[9px] px-[0] bg-dark`}
       >
@@ -29,7 +29,7 @@ function Header() {
           <img width={108} height={48} src={logo} alt="gif planet logo" />
         </div>
 
-        <div className="max-w-[883px] w-full flex items-center justify-end gap-[10px] sm:gap-[40px]">
+        <div className="max-w-[883px] w-full hidden sm:flex items-center justify-end gap-[10px] sm:gap-[40px]">
           <Search />
           <nav className="w-full flex items-center justify-between gap-[16px] relative pr-[10px] sm:pr-[15px]">
             {navigationLinks.map((link) => (

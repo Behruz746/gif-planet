@@ -16,7 +16,9 @@ function Heading({ icon, title, nav }) {
           className="w-[28px] h-[28px] sm:w-[38px] sm:h-[38px]"
           alt={`icon ${title}`}
         />
-        <h1 className={`${textStyles.title} text-white`}>{title}</h1>
+        <h1 className={`${textStyles.title} capitalize text-white`}>
+          {title.replace("-", "/")}
+        </h1>
       </div>
 
       {nav && (

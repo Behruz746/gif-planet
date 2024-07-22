@@ -11,6 +11,7 @@ function App() {
       errorElement: <Error />,
       children: [
         { index: true, element: <Home /> },
+        { path: ":name", element: <div>Gif Name</div> },
         {
           path: "categories",
           element: <CategorieRoot />,

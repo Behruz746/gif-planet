@@ -1,14 +1,18 @@
 import React from "react";
-import { Heading } from "../components";
-import { navCategories } from "../constans";
-import { NavLink } from "react-router-dom";
-import { anime } from "../constans";
-import { styles, textStyles } from "../util/styles";
+import { CategorieCard } from "../components";
+import { useParams } from "react-router-dom";
 
-function Categories() {
+function Categories({ path }) {
+  const { name } = useParams();
+
+  console.log(name);
+
   return (
-    <div className="categories">
-      <h1>Hello</h1>
+    <div className="categories flex items-center justify-start gap-[25px] flex-wrap">
+      <CategorieCard />
+      <CategorieCard />
+      <CategorieCard />
+      <CategorieCard />
     </div>
   );
 }
