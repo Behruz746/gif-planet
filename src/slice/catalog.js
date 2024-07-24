@@ -9,7 +9,7 @@ export const catalogSlice = createSlice({
   initialState,
   reducers: {
     catalogToggleHandler: (state, action) => {
-      if (action.payload.icon) state.catalogToggle = action.payload.toggle;
+      state.catalogToggle = action.payload;
     },
     catalogActive: (state, action) => {
       state.catalogToggle = action.payload;

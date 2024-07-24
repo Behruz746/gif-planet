@@ -3,14 +3,16 @@ import { v4 as uuidv4 } from "uuid";
 import { chart, gifData } from "../constans";
 import { Heading, GifCard } from "../components";
 import { styles } from "../util/styles";
+import { useParams } from "react-router-dom";
 import useThree from "../hooks/useThree";
 
-function Home() {
+function TrendingGifs() {
+  const { name } = useParams();
   const data = useThree(gifData);
 
   return (
     <div className="home flex flex-col gap-[20px] sm:gap-[60px]">
-      <Heading icon={chart} title={"Trending"} nav={true} />
+      <Heading icon={chart} title={name} nav={true} />
       <section
         className={`section ${styles.container} ${styles.padding} flex flex-col sm:flex-row items-start gap-[10px]`}
       >
@@ -29,4 +31,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default TrendingGifs;

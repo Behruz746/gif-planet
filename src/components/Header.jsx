@@ -13,8 +13,8 @@ function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleMouseToggle = (link, toggle) => {
-    dispatch(catalogToggleHandler({ icon: link, toggle }));
+  const handleMouseToggle = (toggle) => {
+    dispatch(catalogToggleHandler(toggle));
   };
 
   return (
@@ -39,12 +39,19 @@ function Header() {
                 }`}
                 className={`${textStyles.text2} text-white cursor-pointer transition ease-in-out hover:text-lightBlue py-[8px]`}
                 key={uuidv4()}
-                onMouseEnter={() => handleMouseToggle(link.icon, true)}
-                onMouseLeave={() => handleMouseToggle(link.icon, false)}
               >
-                {link.icon ? <CatalogIcon color={catalogToggle} /> : link.name}
+                {link.name}
               </NavLink>
             ))}
+
+            <button
+              type="button"
+              className={`${textStyles.text2} text-white cursor-pointer transition ease-in-out hover:text-lightBlue py-[8px]`}
+              onMouseEnter={() => handleMouseToggle(true)}
+              onMouseLeave={() => handleMouseToggle(false)}
+            >
+              <CatalogIcon color={catalogToggle} />
+            </button>
             <Categories />
           </nav>
         </div>
